@@ -36,7 +36,42 @@ composer require "grafite/crypto"
 
 ## Documentation
 
-[https://docs.grafite.ca/others/crypto](https://docs.grafite.ca/others/crypto)
+##### encrypt()
+
+```
+Crypto::encrypt('testing');
+
+// helper
+crypto_encrypt();
+```
+
+##### decrypt()
+
+```
+Crypto::decrypt('encrypted-text');
+
+// helper
+crypto_decrypt();
+```
+
+##### uuid()
+
+```
+Crypto::uuid();
+
+// helper
+crypto_uuid();
+```
+
+##### shareable()
+
+The shareable as mentioned uses a common encryption key so that the encrypted values can be shared.
+
+```
+Crypto::shareable()->encrypt('testing');
+Crypto::shareable()->decrypt('encrypted-text');
+```
+
 
 ## License
 Crypto is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
